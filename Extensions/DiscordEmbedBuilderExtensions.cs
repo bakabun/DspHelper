@@ -8,7 +8,7 @@ namespace Bakabun.DspHelper.Extensions
     public static class DiscordEmbedBuilderExtensions
     {
         public static DiscordEmbedBuilder WithAuthor(this DiscordEmbedBuilder builder, DiscordUser user) =>
-            builder.WithAuthor(user.GetProperName(), iconUrl: user.GetAvatarUrl(ImageFormat.Auto, 128));
+            builder.WithAuthor(user.GetProperName(), iconUrl: user.GetAvatarUrl(ImageFormat.Auto, 256));
 
         public static DiscordEmbedBuilder WithCurrentTimestamp(this DiscordEmbedBuilder builder) =>
             builder.WithTimestamp(DateTimeOffset.Now);

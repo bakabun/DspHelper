@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
 
-namespace DspHelper.Extensions
+namespace Bakabun.DspHelper.Extensions
 {
     public static class ApplicationCommandsContextExtensions
     {

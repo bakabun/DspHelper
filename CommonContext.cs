@@ -56,15 +56,15 @@ namespace Bakabun.DspHelper
             this._originalContext = ctx;
         }
 
-        public async Task<DiscordMessage> RespondAsync(string message, bool ephemeral = false)
+        public async Task<DiscordMessage> RespondAsync(string content, bool ephemeral = false)
         {
             if (this.IsCommandContext)
             {
-                return await ((CommandContext)this).RespondAsync(message);
+                return await ((CommandContext)this).RespondAsync(content);
             }
             else
             {
-                await ((BaseContext)this).CreateResponseAsync(message, ephemeral);
+                await ((BaseContext)this).CreateResponseAsync(content, ephemeral);
                 return await ((BaseContext)this).GetOriginalResponseAsync();
             }
         }
